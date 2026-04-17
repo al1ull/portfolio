@@ -1,40 +1,339 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Alexander Ullrich Portfolio</title>
-        <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="https://use.typekit.net/ujc1mev.css">
-        <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
-    </head>
-    <body>
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="professional.html">professional</a></li>
-                <li><a href="personal.html">personal</a></li>
-                <li><a href="contact.html">contact</a></li>
-            </ul>
-        </nav>
-
-        <section id="home">
-            <div class="main">
-                <h1 class="headings">Alexander Ullrich</h1>
-                
-            </div>
-        </section>
-
-        <section id="about">
-            <h1 class="headings">ABOUT</h1>
-            <div id="pic">
-                <div id="intro">
-                    <p>Hey there! This is my place on the internet where I can show some of the things I've created. Personally and professionally I play many roles, including musician, designer, engineer, technical writer, and constant beginner. I created this site to learn a bit about HTML and CSS, as well as to convince myself to put the finishing touches on a few personal projects. There's always more to come!</p>
-                </div>
-            </div>
-        </section>
-    </body>
-    <footer>
-        <p>&#169; Copyright Alexander Ullrich 2021</p>
-    </footer>
-    </html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Alexander Ullrich | Technical Writer & Developer</title>
+<link rel="icon" type="image/svg+xml" href="img/favicon.svg"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#5f5e5e",
+                    "error-dim": "#4e0309",
+                    "on-tertiary-fixed": "#4b483b",
+                    "primary-dim": "#535252",
+                    "surface-bright": "#fff9eb",
+                    "surface-dim": "#e5daaa",
+                    "on-tertiary-fixed-variant": "#686457",
+                    "secondary-container": "#e4e2e2",
+                    "outline-variant": "#bbb28b",
+                    "surface-container": "#f7eecf",
+                    "primary-fixed-dim": "#d6d4d3",
+                    "surface-tint": "#5f5e5e",
+                    "on-tertiary": "#fff9e7",
+                    "tertiary-fixed-dim": "#e8e2d1",
+                    "inverse-on-surface": "#a29d8c",
+                    "inverse-primary": "#ffffff",
+                    "on-primary-fixed-variant": "#5c5b5b",
+                    "surface": "#fff9eb",
+                    "on-surface-variant": "#665f3e",
+                    "on-secondary": "#faf8f8",
+                    "on-primary": "#faf7f6",
+                    "inverse-surface": "#100e05",
+                    "on-error-container": "#752121",
+                    "background": "#fff9eb",
+                    "secondary-fixed": "#e4e2e2",
+                    "outline": "#837b57",
+                    "on-tertiary-container": "#5d5a4d",
+                    "error": "#9f403d",
+                    "surface-container-highest": "#ede3b8",
+                    "on-secondary-container": "#515252",
+                    "tertiary-container": "#f6f1df",
+                    "secondary-dim": "#535353",
+                    "primary-container": "#e4e2e1",
+                    "tertiary-fixed": "#f6f1df",
+                    "surface-container-low": "#fbf3da",
+                    "on-error": "#fff7f6",
+                    "on-secondary-fixed": "#3f3f3f",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#625f52",
+                    "on-surface": "#383315",
+                    "tertiary-dim": "#565346",
+                    "on-primary-container": "#525151",
+                    "primary-fixed": "#e4e2e1",
+                    "on-background": "#383315",
+                    "surface-container-high": "#f2e8c4",
+                    "on-primary-fixed": "#3f3f3f",
+                    "on-secondary-fixed-variant": "#5b5b5b",
+                    "secondary-fixed-dim": "#d5d4d4",
+                    "error-container": "#fe8983",
+                    "secondary": "#5f5f5f",
+                    "surface-variant": "#ede3b8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Inter"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff9eb;
+            color: #383315;
+            -webkit-font-smoothing: antialiased;
+        }
+        ::selection {
+            background-color: #ede3b8;
+            color: #383315;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-surface-container-highest">
+<!-- TopAppBar -->
+<header class="bg-[#fff9eb] dark:bg-[#1a1915] flex justify-between items-center w-full px-6 py-4 max-w-none fixed top-0 z-50 transition-colors duration-150">
+<div class="font-['Space_Grotesk'] font-bold text-lg text-[#383315] dark:text-[#ede3b8]">
+            ALEXANDER ULLRICH
+        </div>
+<nav class="hidden md:flex gap-8 font-['Space_Grotesk'] tracking-tight text-sm uppercase">
+<a class="text-[#383315] dark:text-[#fff9eb] border-b border-[#383315] dark:border-[#fff9eb] pb-1" href="#home">Home</a>
+<a class="text-[#665f3e] dark:text-[#9c9470] hover:text-[#383315] dark:hover:text-[#fff9eb] transition-colors duration-150" href="#work">Work</a>
+<a class="text-[#665f3e] dark:text-[#9c9470] hover:text-[#383315] dark:hover:text-[#fff9eb] transition-colors duration-150" href="#personal">Personal</a>
+<a class="text-[#665f3e] dark:text-[#9c9470] hover:text-[#383315] dark:hover:text-[#fff9eb] transition-colors duration-150" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<a href="https://github.com" class="hover:bg-[#ede3b8] dark:hover:bg-[#383315] p-2 transition-colors duration-150">
+<span class="material-symbols-outlined text-[#5f5e5e] dark:text-[#a3a29e]">code</span>
+</a>
+</div>
+</header>
+<main class="pt-32 px-6 max-w-screen-xl mx-auto min-h-screen">
+<!-- Home Section -->
+<section id="home" class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-40">
+<div class="md:col-span-3">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant">01_manifesto</span>
+</div>
+<div class="md:col-span-8">
+<h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-12 leading-none">
+                TECHNICAL<br/>WRITER
+            </h1>
+<div class="space-y-8 max-w-2xl">
+<p class="font-body text-xl leading-relaxed text-on-surface">
+                    Hey there! I'm a technical writer and information developer who bridges the gap between complex systems and human understanding. I create documentation, guides, and developer experiences that make technical concepts accessible.
+                </p>
+<p class="font-body text-xl leading-relaxed text-on-surface">
+                    Currently working at StreetLight Data, where I help shape the developer documentation and API strategy. This site showcases my work in technical writing, API documentation, video tutorials, and occasional technical experiments.
+                </p>
+<div class="pt-8 flex items-center gap-4">
+<div class="h-[1px] w-12 bg-outline-variant/40"></div>
+<span class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Established 2021</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Work Section -->
+<section id="work" class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-40">
+<div class="md:col-span-3">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant">02_work_index</span>
+</div>
+<div class="md:col-span-9">
+<h2 class="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-12 leading-none">
+                PROFESSIONAL
+            </h2>
+<p class="font-body text-xl leading-relaxed text-on-surface mb-12 max-w-2xl">
+                Technical writing and developer documentation work. I work as a Technical Writer/Information Developer at StreetLight Data.
+            </p>
+<!-- Writing Samples -->
+<div class="mb-16">
+<h3 class="font-headline text-2xl font-bold mb-6">Writing Samples</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<a href="img/AboutPCPlots.pdf" target="_blank" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">description</span>
+<span class="font-body">About Parallel Coordinate Plots</span>
+</a>
+<a href="img/CreatingPCPlots.pdf" target="_blank" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">description</span>
+<span class="font-body">Creating Parallel Coordinate Plots</span>
+</a>
+<a href="img/AboutACase.pdf" target="_blank" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">description</span>
+<span class="font-body">About the Analytics Case Adapter</span>
+</a>
+<a href="img/ACaseAdapter.pdf" target="_blank" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">description</span>
+<span class="font-body">Configuring a Results Analytics Case</span>
+</a>
+<a href="img/RunningSimpack.pdf" target="_blank" class="flex items-center gap-3 py-3 border-b border-outline-variant/20 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">description</span>
+<span class="font-body">Running a Simpack Simulation</span>
+</a>
+</div>
+</div>
+<!-- StreetLight Contributions -->
+<div class="mb-16">
+<h3 class="font-headline text-2xl font-bold mb-6">StreetLight Developer Hub</h3>
+<p class="font-body text-on-surface-variant mb-8">Technical writing for <a href="https://developer.streetlightdata.com/" class="underline hover:text-primary">StreetLight Data's</a> developer documentation, including API guides, recipes, and video tutorials.</p>
+<!-- Videos -->
+<h4 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-4">Videos</h4>
+<div class="space-y-3 mb-6">
+<a href="https://developer.streetlightdata.com/docs/analyzing-time-trends-with-the-streetlight-insight-api" target="_blank" class="flex items-center gap-3 py-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">play_circle</span>
+<span class="font-body">Analyzing Time Trends with the StreetLight InSight API</span>
+</a>
+<a href="https://help.streetlightdata.com/s/news/august-2024-streetlight-developer-user-group-meeting-MCMCGBRBMSBJCEBODF74FEJ3VXPE" target="_blank" class="flex items-center gap-3 py-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">play_circle</span>
+<span class="font-body">August 2024 Developer User Group Meeting</span>
+</a>
+<a href="https://training.streetlightdata.com/developer-user-group-meetings/2239387" target="_blank" class="flex items-center gap-3 py-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">play_circle</span>
+<span class="font-body">May 2025 Developer User Group Meeting</span>
+</a>
+</div>
+<!-- Recipes -->
+<h4 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-4">Python Recipes</h4>
+<div class="space-y-3 mb-6">
+<a href="https://developer.streetlightdata.com/docs/analyzing-time-trends-with-the-streetlight-insight-api" target="_blank" class="flex items-center gap-3 py-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">code</span>
+<span class="font-body">Analyzing Time Trends</span>
+</a>
+<a href="https://developer.streetlightdata.com/docs/analyze-a-large-area-with-multiple-analyses" target="_blank" class="flex items-center gap-3 py-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">code</span>
+<span class="font-body">Analyze a Large Area with Multiple Analyses</span>
+</a>
+<a href="https://developer.streetlightdata.com/docs/configuring-a-network-performance-analysis" target="_blank" class="flex items-center gap-3 py-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">code</span>
+<span class="font-body">Configuring a Network Performance Analysis</span>
+</a>
+</div>
+<!-- API Guides -->
+<h4 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-4">API Guides</h4>
+<div class="space-y-3">
+<a href="https://developer.streetlightdata.com/docs/intro-to-the-insight-web-api" target="_blank" class="flex items-center gap-3 py-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">article</span>
+<span class="font-body">Introduction to the StreetLight InSight Planning API</span>
+</a>
+<a href="https://developer.streetlightdata.com/docs/intro-to-the-advanced-traffic-counts-api" target="_blank" class="flex items-center gap-3 py-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">article</span>
+<span class="font-body">Introduction to the StreetLight Advanced Traffic Counts API</span>
+</a>
+<a href="https://developer.streetlightdata.com/docs/example-workflow" target="_blank" class="flex items-center gap-3 py-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">article</span>
+<span class="font-body">Sample StreetLight InSight Planning Workflow</span>
+</a>
+<a href="https://developer.streetlightdata.com/docs/satc-example-radius" target="_blank" class="flex items-center gap-3 py-2 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-primary">article</span>
+<span class="font-body">Querying Segments Using the Radius Geometry</span>
+</a>
+</div>
+</div>
+<!-- Workflow Diagrams -->
+<div>
+<h3 class="font-headline text-2xl font-bold mb-6">Workflow Diagrams</h3>
+<p class="font-body text-on-surface-variant mb-4">Workflow diagrams help users understand intended workflows with multiple apps.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="border border-outline-variant/20 p-4">
+<img src="img/SimXmpl_Antenna_Placement_Sdiagram.png" alt="Simulation Example" class="w-full">
+<p class="font-body text-sm text-on-surface-variant mt-2">Simulation Example Overview</p>
+</div>
+<div class="border border-outline-variant/20 p-4">
+<img src="img/ProcessInfographic.png" alt="Process Infographic" class="w-full">
+<p class="font-body text-sm text-on-surface-variant mt-2">Automation & Optimization Apps</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Personal Section -->
+<section id="personal" class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-40">
+<div class="md:col-span-3">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant">03_personal_artifacts</span>
+</div>
+<div class="md:col-span-9">
+<h2 class="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-12 leading-none">
+                PERSONAL
+            </h2>
+<p class="font-body text-xl leading-relaxed text-on-surface mb-12 max-w-2xl">
+                Things I make when I'm not writing documentation.
+            </p>
+<!-- Project List -->
+<div class="grid grid-cols-1 gap-0 border-t border-outline-variant/20">
+<!-- gemma4-e4b-techwriter -->
+<div class="py-12 border-b border-outline-variant/10">
+<h3 class="font-headline text-2xl font-bold tracking-tight mb-2">gemma4-e4b-techwriter</h3>
+<p class="font-body text-on-surface-variant mb-3">A fine-tuned version of Google Gemma 4 (8B parameters) for technical writing assistance. Fine-tuned using LoRA/QLoRA on technical writing examples.</p>
+<a href="https://huggingface.co/al1ul/gemma4-e4b-techwriter" target="_blank" class="font-label text-xs uppercase tracking-widest text-primary border-b border-primary/20 hover:border-primary transition-all">View on Hugging Face</a>
+</div>
+<!-- Punk Rock Chair -->
+<div class="py-12 border-b border-outline-variant/10">
+<h3 class="font-headline text-2xl font-bold tracking-tight mb-2">Punk Rock Chair</h3>
+<p class="font-body text-on-surface-variant mb-3">The capstone class to my industrial design minor was a furniture design class. I chose punk rock as inspiration.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<img src="img/punkchairrendering.png" alt="Chair Rendering" class="w-full border border-outline-variant/40">
+<img src="img/PunkChair.jpeg" alt="Built Chair" class="w-full border border-outline-variant/40">
+</div>
+</div>
+<!-- Chaotic Goodboy -->
+<div class="py-12 border-b border-outline-variant/10">
+<h3 class="font-headline text-2xl font-bold tracking-tight mb-2">Chaotic Goodboy</h3>
+<p class="font-body text-on-surface-variant mb-3">My musical project.</p>
+<iframe style="border: 0; width: 300px; height: 300px;" src="https://bandcamp.com/EmbeddedPlayer/track=36056725/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/" seamless><a href="https://chaoticgoodboy.bandcamp.com/track/practical-inside-joke">Practical Inside Joke by Chaotic Goodboy</a></iframe>
+</div>
+<!-- This Website -->
+<div class="py-12 border-b border-outline-variant/10">
+<h3 class="font-headline text-2xl font-bold tracking-tight mb-2">This Website</h3>
+<p class="font-body text-on-surface-variant">For better or for worse, I designed and coded this website.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+<div class="md:col-span-3">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant">04_transmission</span>
+</div>
+<div class="md:col-span-6">
+<h2 class="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-12 leading-none">
+                CONTACT
+            </h2>
+<p class="font-body text-xl leading-relaxed text-on-surface mb-12">
+                Want to connect? Send a message.
+            </p>
+<form action="mailto:alex1ullrich@gmail.com" method="POST" enctype="multipart/form-data" name="EmailForm" class="space-y-8">
+<div class="flex flex-col gap-2">
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant" for="name">01_Identity</label>
+<input type="text" name="name" id="name" placeholder="YOUR NAME" class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant/40 focus:border-on-surface focus:ring-0 px-0 py-3 font-headline text-lg placeholder:text-outline-variant/30 text-on-surface transition-all duration-150">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant" for="email">02_Return_Address</label>
+<input type="email" name="email" id="email" placeholder="YOUR EMAIL" class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant/40 focus:border-on-surface focus:ring-0 px-0 py-3 font-headline text-lg placeholder:text-outline-variant/30 text-on-surface transition-all duration-150">
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant" for="message">03_Payload</label>
+<textarea name="message" id="message" placeholder="YOUR MESSAGE..." rows="4" class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant/40 focus:border-on-surface focus:ring-0 px-0 py-3 font-headline text-lg placeholder:text-outline-variant/30 text-on-surface transition-all duration-150 resize-none"></textarea>
+</div>
+<button type="submit" class="bg-primary text-on-primary font-label text-sm font-bold tracking-[0.2em] px-12 py-5 hover:bg-on-surface transition-colors duration-150">
+SEND
+</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#fbf3da] dark:bg-[#1a1915] mt-20 border-t border-[#bbb28b]/20">
+<div class="font-['Space_Grotesk'] text-[10px] uppercase tracking-widest text-[#5f5e5e] dark:text-[#a3a29e]">
+            &copy; 2021-2026 ALEXANDER ULLRICH. ALL RIGHTS RESERVED.
+        </div>
+<div class="flex gap-8 font-['Space_Grotesk'] text-[10px] uppercase tracking-widest">
+<a class="text-[#665f3e] dark:text-[#9c9470] hover:underline hover:text-[#383315] dark:hover:text-[#fff9eb]" href="https://github.com">Github</a>
+<a class="text-[#665f3e] dark:text-[#9c9470] hover:underline hover:text-[#383315] dark:hover:text-[#fff9eb]" href="https://huggingface.co/al1ul">Hugging Face</a>
+</div>
+</footer>
+</body></html>
