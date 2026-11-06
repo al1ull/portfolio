@@ -6,230 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
     <title>From Feature Tours to Guided Outcomes | Alex U</title>
 
-    <style>
-        :root {
-            --width: 720px;
-            --font: Verdana, sans-serif;
-            --background-color: #282828;
-            --text-color: #ebdbb2;
-            --link-color: #83a598;
-            --border-color: #3c3836;
-        }
-
-        * {
-            font-family: var(--font);
-        }
-
-        body {
-            font-size: 1em;
-            margin: auto;
-            padding: 20px;
-            max-width: var(--width);
-            text-align: left;
-            background-color: var(--background-color);
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            line-height: 1.6;
-            color: var(--text-color);
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            color: var(--text-color);
-        }
-
-        a {
-            color: var(--link-color);
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        a:visited {
-            color: var(--link-color);
-        }
-
-        nav a {
-            margin-right: 8px;
-        }
-
-        strong, b {
-            color: var(--text-color);
-        }
-
-        main {
-            line-height: 1.6;
-        }
-
-        hr {
-            border: 0;
-            border-top: 1px dashed var(--border-color);
-            margin: 2em 0;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        code {
-            padding: 2px;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            border-radius: 3px;
-        }
-
-        blockquote {
-            border-left: 1px solid var(--border-color);
-            color: var(--text-color);
-            padding-left: 20px;
-            font-style: italic;
-            margin-left: 0;
-        }
-
-        footer {
-            padding: 25px 0;
-            text-align: center;
-            margin-top: 2em;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .title {
-            text-decoration: none;
-        }
-
-        .title h1 {
-            font-size: 1.5em;
-        }
-
-        .section-title {
-            font-size: 1.1em;
-            color: var(--text-color);
-            margin-top: 2em;
-            margin-bottom: 0.5em;
-        }
-
-        .heading-2 {
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 1em;
-        }
-
-        .heading-3 {
-            font-size: 1.3em;
-            margin-bottom: 0.5em;
-        }
-
-        .heading-h4 {
-            font-size: 1em;
-            margin-top: 1em;
-            margin-bottom: 0.5em;
-            color: var(--text-color);
-        }
-
-        input, textarea {
-            font-size: 1em;
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 12px;
-            border: 1px solid var(--border-color);
-            background-color: var(--background-color);
-            color: var(--text-color);
-            box-sizing: border-box;
-        }
-
-        input:focus, textarea:focus {
-            outline: 2px solid var(--link-color);
-        }
-
-        button, input[type="submit"] {
-            font-size: 1em;
-            padding: 10px 20px;
-            background-color: var(--text-color);
-            color: var(--background-color);
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        button:hover, input[type="submit"]:hover {
-            background-color: var(--link-color);
-        }
-
-        .label {
-            font-size: 0.8em;
-            color: var(--text-color);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 1em 0;
-        }
-
-        .project-item {
-            border: 1px solid var(--border-color);
-            padding: 15px;
-        }
-
-        .project-item img {
-            margin-bottom: 10px;
-        }
-
-        .links-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .links-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .links-list li:last-child {
-            border-bottom: none;
-        }
-
-        iframe {
-            max-width: 100%;
-            border: none;
-        }
-
-        .nav-link {
-            margin-right: 12px;
-        }
-
-        .image-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin: 15px 0;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 1em 0;
-            font-size: 0.9em;
-        }
-
-        th, td {
-            border: 1px solid var(--border-color);
-            padding: 8px;
-            text-align: left;
-            vertical-align: top;
-        }
-
-        th {
-            color: var(--text-color);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -249,96 +26,36 @@
 
     <main>
         <article>
-            <h2 class="heading-2">From Feature Tours to Guided Outcomes</h2>
-            <p class="label">Case study &middot; UX content strategy, product onboarding, in-app guidance &middot; 2026</p>
-            <p><strong>Products:</strong> StreetLight InSight Planning and Traffic Monitor &middot; <strong>Platforms:</strong> WalkMe, Help Center, eLearning</p>
+            <h2 class="heading-2">Onboarding Redesign</h2>
+            <p>I reviewed how StreetLight introduces users to its transportation analytics products and shifted onboarding from long, feature-oriented tours to short, contextual guidance built around the problem the user wants to solve.</p>
 
-            <p>I reviewed how StreetLight introduces users to its transportation-analysis products and shifted onboarding away from long, feature-oriented tours toward short, contextual guidance built around a user's transportation question. The initial release included revised in-app guides, a reorganized Help menu, on-demand release announcements, and tours in the traffic product named after the question you're trying to answer. User and business outcomes below are hypotheses unless identified as observed.</p>
-
-            <h3 class="section-title">The problem</h3>
-            <p>StreetLight already had a substantial support ecosystem &mdash; WalkMe walkthroughs, a Help Center, and training &mdash; but the guidance often described interface controls before explaining why they mattered. The content audit surfaced recurring patterns:</p>
+            <h3 class="section-title">The challenge</h3>
+            <p>We had a lot of help content available, but it wasn't always presented at the right time or in the right context.</p>
             <ul>
-                <li>Tours narrated controls (&ldquo;click Next,&rdquo; map tools) &mdash; users could finish a tour without knowing how to apply the product to a project.</li>
-                <li>Introductory flows sent users to other pages, videos, or training before they had encountered a need for those resources.</li>
-                <li>Overlapping tours and entry points, especially around zones, analysis configuration, and Traffic Monitor modules.</li>
-                <li>The Help menu mixed contextual help with broader reference and learning materials.</li>
-                <li>What's New could take over the session at login.</li>
+                <li>Tours narrated controls (&ldquo;click Next&rdquo;), users might finish a tour without knowing how to apply the product to a project.</li>
+                <li>Intro flows sent users to other pages and training before they had a need for them.</li>
+                <li>Trying to anticipate users questions resulted in popup overload.</li>
             </ul>
-            <p>The core challenge was not a lack of help content &mdash; it was <strong>aligning each piece of guidance with the user's immediate goal and stage of work</strong>.</p>
-            <p><em>Screenshot to add: before-state WalkMe balloon or menu showing control-by-control instructions or a premature Help Center/training link.</em></p>
+            <p>WalkMe analytics confirmed it: <strong>most Help menu items had fewer than 3 views per month.</strong></p>
+            <p><img src="img/before-welcome-tutorial-links.png" alt="Before: the welcome banner on the Analyses page sends new users to tutorials and training (Add Zones Tutorial, Learn More Tutorial) before they have a task to work on."></p>
 
-            <h3 class="section-title">Research and approach</h3>
-            <p>Inputs reviewed: historical and updated WalkMe element exports (used to compare before/after copy), the InSight Planning Help Center export, the Fundamentals eLearning curriculum, project implementation notes, and external UX research &mdash; Krystal Higgins's <em>Better Onboarding</em> (onboarding as an ongoing journey of guided interaction, not a first-login event) and Nielsen Norman Group research on contextual help, onboarding tutorials, and progressive disclosure.</p>
-            <p>Help menu analytics complemented the content audit: <strong>most menu items had fewer than 3 views per month, and all but 5 had fewer than 10</strong> &mdash; evidence that the existing entry points were barely being used, so the problem was not discoverability of more content but the usefulness and timing of the guidance itself.</p>
-            <p>This led to a simple cross-channel model that clarified where guidance should live:</p>
-            <blockquote>
-                <p><strong>Product:</strong> help me do it. &nbsp;<strong>Help:</strong> help me recover or understand it. &nbsp;<strong>Training:</strong> help me master it.</p>
-            </blockquote>
+            <h3 class="section-title">What I did</h3>
+            <p>I audited the existing guidance and user analytics, comparing against best practices from the Nielsen Norman Group and <a href="https://better-onboarding.kryshiggins.com/" target="_blank">Better Onboarding by Krystal Higgins</a>, as well as recent trends from <a href="https://www.chameleon.io/benchmark-report" target="_blank">Chameleon's 2025 Onboarding Benchmark</a>.</p>
+            <p>My guiding principle was to always keep the user's transportation question in mind as they navigate the product and make key decisions. I refined contextual help to help the decision in front of them at any given place in our app. Four changes followed:</p>
             <ul>
-                <li><strong>Product (WalkMe):</strong> choose options, understand consequential settings, proceed at the moment of need.</li>
-                <li><strong>Help:</strong> contextual menu plus durable Help Center reference.</li>
-                <li><strong>Training:</strong> conceptual foundations and scenario-based practice in eLearning.</li>
+                <li>Rewrote in-app tutorials to open with the user's question: &ldquo;Create your first analysis&rdquo; opens with <em>&ldquo;An analysis helps you answer a transportation question&hellip;&rdquo;</em>; similar rewrites cover choosing study areas and reading results.</li>
+                <li>Split the Help menu into <strong>Guided tutorials</strong> and <strong>Related articles</strong> for the current page, separate from <strong>Learning and support</strong> (Help Center, training, support).</li>
+                <li>Renamed contextual help messages to be more action-oriented and directly relevant to the user's task.</li>
+                <li>Made release announcements on demand: What's New no longer opens at login; a small notification on the button opens the highlights when you choose.</li>
             </ul>
-            <p>Five guiding principles shaped the rewrites:</p>
-            <ul>
-                <li>Start with the transportation question, not a feature inventory.</li>
-                <li>Explain decisions and consequences, not every click.</li>
-                <li>Show help in context, and let users reopen it later.</li>
-                <li>Use one clear next step.</li>
-                <li>Keep deeper learning optional.</li>
-            </ul>
-
-            <h3 class="section-title">What changed</h3>
-            <p>Four changes made the biggest difference:</p>
-
-            <h4 class="heading-h4">In-app guides now start with your question</h4>
-            <p>Instead of step-by-step tours of every screen and button, the in-product messages now start from what you're trying to find out. For example, the old &ldquo;Create New Analysis&rdquo; tour became &ldquo;Create an analysis&rdquo;, opening with: <em>&ldquo;Start with a transportation question you want to answer. We'll help you choose an analysis that fits what you want to measure.&rdquo;</em> Similar rewrites cover choosing the places to study and reading the results &mdash; asking things like &ldquo;What stands out in your results?&rdquo; rather than explaining each chart control.</p>
-            <p><em>Screenshot to add: the &ldquo;Create an analysis&rdquo; message on the analysis setup screen.</em></p>
+            <p><img src="img/create-analysis-balloon.png" alt="The &ldquo;Create your first analysis&rdquo; message on the analysis setup screen, starting with the transportation question you want to answer."></p>
             <p><em>Screenshot to add: the &ldquo;Find insights in your results&rdquo; guidance beside the results charts.</em></p>
+            <p><img src="img/help-menu-learning-support.png" alt="The reorganized Help menu: &ldquo;Guided tutorials&rdquo; and &ldquo;Related articles&rdquo; for the current page, separated from the &ldquo;Learning and support&rdquo; section (Help Center, Training Portal, Contact Support)."></p>
+            <p><img src="img/whats-new-fall-2026-notification.png" alt="The Fall 2026 What's New notification attached to the What's New button, instead of opening automatically at login."></p>
+            <p><img src="img/whats-new-release-highlights.png" alt="The What's New release-highlights carousel, opened on demand (Summer 2026 release shown)."></p>
 
-            <h4 class="heading-h4">Help menu: help for right now vs. learning for later</h4>
-            <p>The Help menu was split into <strong>Help with this page</strong> &mdash; guides for what you're doing at this moment &mdash; and <strong>Learning and support</strong> &mdash; longer documentation and training. The menu analytics showed most items got almost no views, so the redesign made the right kind of help obvious: when you're stuck mid-task, the first question is &ldquo;What do I do here?&rdquo;, not &ldquo;Which documentation collection should I browse?&rdquo;</p>
-            <p><em>Screenshot to add: the Help menu showing &ldquo;Help with this page&rdquo; and the learning/reference section.</em></p>
-
-            <h4 class="heading-h4">Traffic investigations: find the right tool by the question, not the feature name</h4>
-            <p>In the traffic-monitoring product, the per-feature tours were renamed to describe the investigation you're trying to do &mdash; <em>Explore recent traffic conditions over time</em>, <em>Investigate traffic slowdowns</em>, <em>Investigate traffic queues</em>, <em>Monitor traffic on key routes</em>, <em>Evaluate the impacts of a lane closure</em> &mdash; instead of feature names like &ldquo;Speeds&rdquo; or &ldquo;Queuing&rdquo;. The guidance inside changed too: from &ldquo;drag the slider&rdquo; to &ldquo;move through the timeline to see how conditions changed throughout the day.&rdquo;</p>
-            <p><em>Screenshot to add: the traffic product's Help menu with one of these question-named tours, plus one revised guide.</em></p>
-
-            <h4 class="heading-h4">Release announcements: on demand, not automatic</h4>
-            <p>What's New no longer opens automatically at login and takes over the session. A small notification attached to the What's New button lets you browse the release highlights whenever you choose.</p>
-            <p><em>Screenshot to add: the Fall 2026 What's New notification on the button; optionally the highlights opened on demand.</em></p>
-
-            <h4 class="heading-h4">Before and after</h4>
-            <table>
-                <tr>
-                    <th>Before</th>
-                    <th>After</th>
-                    <th>Design shift</th>
-                </tr>
-                <tr>
-                    <td>Setting up the study area: &ldquo;Click Next to continue.&rdquo;</td>
-                    <td>&ldquo;Check the zones you've selected, then click Save.&rdquo;</td>
-                    <td>From tour progression to completing an actual task.</td>
-                </tr>
-                <tr>
-                    <td>Looking at traffic over time: &ldquo;Drag the slider to change the time of day.&rdquo;</td>
-                    <td>&ldquo;Move through the timeline to see how conditions changed throughout the day. Look for locations and times that stand out.&rdquo;</td>
-                    <td>From control instruction to analytical purpose.</td>
-                </tr>
-                <tr>
-                    <td>Reading the results: &ldquo;Use these controls to filter the metrics you want to visualize&hellip;&rdquo;</td>
-                    <td>&ldquo;Identify the metrics that relate to your transportation question.&rdquo;</td>
-                    <td>From interface explanation to decision support.</td>
-                </tr>
-                <tr>
-                    <td>Starting a new analysis: a broad tour with links to more resources.</td>
-                    <td>Start with a transportation question and choose an analysis that fits it.</td>
-                    <td>From content discovery to a goal-driven starting point.</td>
-                </tr>
-            </table>
-
-            <h3 class="section-title">Outcomes and measurement</h3>
-            <p><strong>What can be claimed:</strong> a revised cross-channel content strategy; rewritten titles and copy across Planning, zones, visualizations, and Traffic Monitor in the updated WalkMe export; and team-reported changes to the Help menu, contextual walkthrough access, and What's New. Help menu usage was measured (see above), but <strong>no outcome uplift is claimed yet</strong> &mdash; that would require product analytics, support data, or user research. A measurement plan covers first meaningful outcomes (analysis submission, first Traffic Monitor investigation), tour starts and exits, and What's New engagement.</p>
+            <h3 class="section-title">Value added</h3>
+            <p>The revised cross-channel content strategy and rewrites shipped across our products. We are monitoring the outcomes to measure the impact of these changes, and adjust as needed. Already, the more curated set of content is easier to find and use for internal users, and easier for content designers to maintain.</p>
 
             <hr>
             <p><a href="index.html#work">&larr; Back to all work</a></p>

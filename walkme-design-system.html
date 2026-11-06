@@ -4,232 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
-    <title>[TODO: Title] | Alex U</title>
+    <title>A Decision-First Design System for In-App Guidance | Alex U</title>
 
-    <style>
-        :root {
-            --width: 720px;
-            --font: Verdana, sans-serif;
-            --background-color: #282828;
-            --text-color: #ebdbb2;
-            --link-color: #83a598;
-            --border-color: #3c3836;
-        }
-
-        * {
-            font-family: var(--font);
-        }
-
-        body {
-            font-size: 1em;
-            margin: auto;
-            padding: 20px;
-            max-width: var(--width);
-            text-align: left;
-            background-color: var(--background-color);
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-            line-height: 1.6;
-            color: var(--text-color);
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            color: var(--text-color);
-        }
-
-        a {
-            color: var(--link-color);
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        a:visited {
-            color: var(--link-color);
-        }
-
-        nav a {
-            margin-right: 8px;
-        }
-
-        strong, b {
-            color: var(--text-color);
-        }
-
-        main {
-            line-height: 1.6;
-        }
-
-        hr {
-            border: 0;
-            border-top: 1px dashed var(--border-color);
-            margin: 2em 0;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        code {
-            padding: 2px;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            border-radius: 3px;
-        }
-
-        blockquote {
-            border-left: 1px solid var(--border-color);
-            color: var(--text-color);
-            padding-left: 20px;
-            font-style: italic;
-            margin-left: 0;
-        }
-
-        footer {
-            padding: 25px 0;
-            text-align: center;
-            margin-top: 2em;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .title {
-            text-decoration: none;
-        }
-
-        .title h1 {
-            font-size: 1.5em;
-        }
-
-        .section-title {
-            font-size: 1.1em;
-            color: var(--text-color);
-            margin-top: 2em;
-            margin-bottom: 0.5em;
-        }
-
-        .heading-2 {
-            font-size: 2em;
-            font-weight: bold;
-            margin-bottom: 1em;
-        }
-
-        .heading-3 {
-            font-size: 1.3em;
-            margin-bottom: 0.5em;
-        }
-
-        .heading-h4 {
-            font-size: 1em;
-            margin-top: 1em;
-            margin-bottom: 0.5em;
-            color: var(--text-color);
-        }
-
-        input, textarea {
-            font-size: 1em;
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 12px;
-            border: 1px solid var(--border-color);
-            background-color: var(--background-color);
-            color: var(--text-color);
-            box-sizing: border-box;
-        }
-
-        input:focus, textarea:focus {
-            outline: 2px solid var(--link-color);
-        }
-
-        button, input[type="submit"] {
-            font-size: 1em;
-            padding: 10px 20px;
-            background-color: var(--text-color);
-            color: var(--background-color);
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-
-        button:hover, input[type="submit"]:hover {
-            background-color: var(--link-color);
-        }
-
-        .label {
-            font-size: 0.8em;
-            color: var(--text-color);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 1em 0;
-        }
-
-        .project-item {
-            border: 1px solid var(--border-color);
-            padding: 15px;
-        }
-
-        .project-item img {
-            margin-bottom: 10px;
-        }
-
-        .links-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .links-list li {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .links-list li:last-child {
-            border-bottom: none;
-        }
-
-        iframe {
-            max-width: 100%;
-            border: none;
-        }
-
-        .nav-link {
-            margin-right: 12px;
-        }
-
-        .image-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin: 15px 0;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 1em 0;
-            font-size: 0.9em;
-        }
-
-        th, td {
-            border: 1px solid var(--border-color);
-            padding: 8px;
-            text-align: left;
-            vertical-align: top;
-        }
-
-        th {
-            color: var(--text-color);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -249,73 +26,22 @@
 
     <main>
         <article>
-            <h2 class="heading-2">[TODO: Title — e.g. Building a WalkMe Design System for in-app guidance]</h2>
-            <p class="label">Case study &middot; [TODO: focus areas, e.g. design systems, content design, UX writing] &middot; [TODO: year]</p>
-            <p><strong>Platform:</strong> WalkMe &middot; <strong>Role:</strong> [TODO: your role — e.g. creator/lead]</p>
+            <h2 class="heading-2">Design System for In-App Guidance</h2>
+            <p>With the input of our UX team, I built and rolled out a design system for StreetLight's in-app guidance on WalkMe: a decision framework for <em>when to use which kind of guidance</em>, paired with reusable templates for <em>how to build it</em>. The result is guidance that's consistent across products, faster to ship, and matched to the user's actual need rather than built ad hoc.</p>
 
-            <p>[TODO: 2–3 sentence summary — what the design system is, what it standardizes, and why you built it.]</p>
+            <h3 class="section-title">The challenge</h3>
+            <p>WalkMe guidance across our products had grown large but inconsistent, with no shared standard for which component to use in a given situation, styles that drifted depending on who built it, and no common vocabulary in requirements and reviews.</p>
 
-            <h3 class="section-title">The problem</h3>
-            <p>[TODO: What was inconsistent or painful before? E.g. every walkthrough looked and read differently, no reusable components, hard to maintain, slow to ship new guidance.]</p>
+            <h3 class="section-title">What I did</h3>
             <ul>
-                <li>[TODO: problem point 1]</li>
-                <li>[TODO: problem point 2]</li>
-            </ul>
-            <p>[TODO: any evidence — e.g. audit counts: X walkthroughs, Y different styles/templates in use.]</p>
-            <p><em>Screenshot to add: [TODO: e.g. examples of inconsistent guidance before the design system].</em></p>
-
-            <h3 class="section-title">Research and approach</h3>
-            <p>[TODO: inputs — e.g. audit of existing WalkMe content, design system references, stakeholder interviews, platform constraints.]</p>
-            <p>Guiding principles:</p>
-            <ul>
-                <li>[TODO: principle 1 — e.g. consistency over novelty]</li>
-                <li>[TODO: principle 2 — e.g. reusable before custom]</li>
-                <li>[TODO: principle 3 — e.g. accessible and easy to localize]</li>
+                <li>Designed a decision framework that maps five user-need types (onboarding, ongoing tasks, reference, new features, operational alerts) to the right guidance format and trigger</li>
+                <li>Built a library of 10 reusable component templates (tutorials, tours, modals, popups, tooltips, banners) with implementation steps and autoplay rules</li>
+                <li>Wrote the content patterns: task-based tutorials of 3&ndash;6 steps, brief on-demand tours, and nonblocking popups that explain <em>why</em>, not just where to click</li>
+                <li>Set up governance &mdash; templates, folder structure, and a pattern that lets non-developers maintain guidance without code changes &mdash; so the system stays consistent as it grows</li>
             </ul>
 
-            <h3 class="section-title">What changed</h3>
-
-            <h4 class="heading-h4">[TODO: e.g. Component library — balloons, tooltips, smart tips]</h4>
-            <p>[TODO: describe the components and when to use each.]</p>
-            <p><em>Screenshot to add: [TODO: component examples].</em></p>
-
-            <h4 class="heading-h4">[TODO: e.g. Content patterns — voice, structure, copy templates]</h4>
-            <p>[TODO: describe the writing/content patterns.]</p>
-
-            <h4 class="heading-h4">[TODO: e.g. Visual style — layout, spacing, theming]</h4>
-            <p>[TODO: describe the visual standards.]</p>
-
-            <h4 class="heading-h4">[TODO: e.g. Governance — how new guidance gets made and reviewed]</h4>
-            <p>[TODO: describe process, ownership, contribution model.]</p>
-
-            <h4 class="heading-h4">Before and after</h4>
-            <table>
-                <tr>
-                    <th>Metric</th>
-                    <th>Before</th>
-                    <th>After</th>
-                </tr>
-                <tr>
-                    <td>[TODO: e.g. time to publish a new walkthrough]</td>
-                    <td>[TODO]</td>
-                    <td>[TODO]</td>
-                </tr>
-                <tr>
-                    <td>[TODO: e.g. number of distinct styles/templates in use]</td>
-                    <td>[TODO]</td>
-                    <td>[TODO]</td>
-                </tr>
-                <tr>
-                    <td>[TODO: e.g. % of new guidance using system components]</td>
-                    <td>[TODO]</td>
-                    <td>[TODO]</td>
-                </tr>
-            </table>
-
-            <h3 class="section-title">Outcomes and measurement</h3>
-            <p><strong>Measured:</strong> [TODO: results — e.g. adoption rate, time savings, consistency audit results.]</p>
-            <p><strong>Not yet measured / caveats:</strong> [TODO: anything still open.]</p>
-            <p><em>Screenshot to add: [TODO: e.g. the design system documentation or component gallery].</em></p>
+            <h3 class="section-title">Value added</h3>
+            <p>New guidance now ships faster and looks and reads the same across products, because teams build from shared templates instead of starting from scratch. Adoption and consistency metrics are still being measured &mdash; the measurement plan covers template usage, rule adherence, and user-facing outcomes like tutorial completion.</p>
 
             <hr>
             <p><a href="index.html#work">&larr; Back to all work</a></p>
