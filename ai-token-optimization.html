@@ -27,22 +27,22 @@
     <main>
         <article>
             <h2 class="heading-2">Token Usage Optimization</h2>
-            <p>Ask InSight answers natural-language questions about traffic metrics and renders maps, tables, and charts. Its instruction stack had grown to ~93,000 characters across system prompts, MCP tool definitions, and reference guides. Because multi-step agent loops re-send that context on every tool call, a single question cost 84k&ndash;99k tokens. I led an end-to-end context-engineering initiative that gave every rule a single authoritative owner, moved reference docs to on-demand loading, and verified every change with dedicated eval suites.</p>
+            <p>An agentic AI assistant answers natural-language questions about data and visualizes the results. Its instruction stack had grown large and redundant across prompts, tool descriptions, and reference guides, and because a multi-step agent re-sends its context at every step, a single question was costing a lot in tokens. I led an end-to-end context-engineering initiative that gave every rule a single authoritative home, moved reference material to on-demand loading, and verified every change with dedicated eval suites.</p>
 
             <h3 class="section-title">The challenge</h3>
-            <p>In an agentic loop, context cost can add up quickly. Each sequential tool call re-sends the entire static prefix, so 3 tool calls &asymp; 80k&ndash;100k+ tokens for one question. The ~93,000-character instruction stack had also accumulated duplication and contradictions: the same query rules were paid for in the system prompt, in MCP tool docstrings, and again in markdown reference resources, and conflicting instructions (&ldquo;always call the metrics catalog&rdquo; vs. &ldquo;call only when uncertain&rdquo;) degraded accuracy.</p>
-            <p>Baseline: ~23,200 tokens of static instructions and <strong>83.7k&ndash;99.4k tokens per user prompt</strong>, with an ~87% pass rate on the 30-case analytics benchmark.</p>
+            <p>In an agentic loop, context cost compounds quickly: each sequential step re-sends the accumulated context, so token usage grew fast with every additional step. The instruction stack had also accumulated duplication and contradictions &mdash; the same rules were repeated across the prompt, tool descriptions, and reference documents, and conflicting guidance degraded answer quality.</p>
+            <p>Baseline: a bloated static instruction corpus and an ~87% pass rate on a 30-case internal analytics benchmark.</p>
 
             <h3 class="section-title">What I did</h3>
-            <p>I audited every instruction layer (system prompt, MCP tool descriptions, static resources, domain skills) plus multi-step evaluation traces, and read the agent framework and MCP adapter source to verify how context actually behaves &mdash; not assumptions. The guiding principles: every operational rule gets a single authoritative owner; in a multi-step agent, removing one round trip saves more tokens than deleting thousands of characters of prose; and every context cut is paired with evals so regressions surface immediately.</p>
+            <p>I audited every instruction layer plus multi-step evaluation traces, and read the underlying agent framework&rsquo;s source to verify how context actually behaves &mdash; not assumptions. The guiding principles: every rule gets a single authoritative home; in a multi-step agent, removing one round trip saves more tokens than deleting thousands of characters of prose; and every context change is paired with evals so regressions surface immediately.</p>
             <ul>
-                <li><strong>Single-owner instruction model:</strong> the host prompt now owns persona, safety gates, and UI rendering; tool schemas own parameters and error recovery; live catalog tools own dynamic definitions; on-demand resources own deep examples. The static corpus dropped from 92,893 to 70,603 characters (<strong>&minus;24%</strong>), including a <strong>&minus;53%</strong> cut to the main capabilities guide.</li>
-                <li><strong>Progressive disclosure instead of mandatory pre-loads:</strong> removed the mandatory pre-query resource load (the framework discarded it one step later anyway) and instructed the agent to load reference docs only immediately before the tool call they inform, plus parallel tool execution for multi-part questions. Average tool calls per turn fell from 3.5&ndash;3.8 to 2.6.</li>
-                <li><strong>Conflict fixes, verified by a new regression suite:</strong> resolved the contradictory instructions and authored a 10-case Instruction Stack Regression Suite (tool-call assertions, UI envelope checks, judge rubrics), run in gated stages against the existing 30-case Canonical Suite before and after each change.</li>
+                <li><strong>Single-owner instruction model:</strong> each rule now lives in exactly one authoritative place instead of being repeated &mdash; and sometimes contradicted &mdash; across prompts, tool descriptions, and reference docs. The static instruction corpus shrank by about a quarter, with the deepest cuts to the main usage guide.</li>
+                <li><strong>On-demand loading instead of mandatory pre-loads:</strong> reference material is fetched only when it is actually needed, and independent steps run in parallel where possible. Average steps per question fell from 3.5&ndash;3.8 to about 2.6.</li>
+                <li><strong>Conflict fixes, verified by a new regression suite:</strong> resolved the contradictory guidance and added a dedicated regression suite, run alongside the existing 30-case benchmark before and after every change.</li>
             </ul>
 
             <h3 class="section-title">Value added</h3>
-            <p>Mean tokens per user question fell <strong>&minus;20&ndash;31%</strong>, the canonical benchmark pass rate rose from ~87% to <strong>97&ndash;98%</strong>, and privacy &amp; safety refusal evals passed <strong>100%</strong> (15/15). Follow-on work stripped ~5,800 tokens/call of dead output-schema overhead on newer models, and a four-line structured-geography rule cut token usage on lite models by 19% and query failures by 38%.</p>
+            <p>Mean tokens per question fell <strong>&minus;20&ndash;31%</strong>, the benchmark pass rate rose from ~87% to <strong>97&ndash;98%</strong>, and safety-refusal evals passed <strong>100%</strong> (15/15). Follow-on work delivered further double-digit token reductions on smaller models and a significant drop in query failures.</p>
             <table>
                 <tr>
                     <th>Metric</th>
@@ -51,27 +51,27 @@
                 </tr>
                 <tr>
                     <td>Static instruction corpus</td>
-                    <td>92,893 chars (~23.2k tokens)</td>
-                    <td>70,603 chars (~17.7k tokens) &mdash; <strong>&minus;24%</strong></td>
+                    <td>Large, with duplicated rules</td>
+                    <td><strong>&minus;24%</strong></td>
                 </tr>
                 <tr>
                     <td>Mean tokens per user question</td>
-                    <td>83.7k&ndash;99.4k</td>
-                    <td>64.5k&ndash;68.5k &mdash; <strong>&minus;20&ndash;31%</strong></td>
+                    <td>High &mdash; re-sent at every step</td>
+                    <td><strong>&minus;20&ndash;31%</strong></td>
                 </tr>
                 <tr>
-                    <td>Avg tool calls per turn</td>
-                    <td>3.51&ndash;3.83</td>
-                    <td>2.58&ndash;2.68</td>
+                    <td>Avg steps per question</td>
+                    <td>3.5&ndash;3.8</td>
+                    <td>~2.6</td>
                 </tr>
                 <tr>
-                    <td>Canonical benchmark pass rate (30 cases)</td>
+                    <td>Benchmark pass rate (30 cases)</td>
                     <td>~87%</td>
                     <td><strong>97&ndash;98%</strong></td>
                 </tr>
                 <tr>
-                    <td>Privacy &amp; safety refusal evals</td>
-                    <td>not isolated</td>
+                    <td>Safety-refusal evals</td>
+                    <td>Not isolated</td>
                     <td><strong>100%</strong> (15/15)</td>
                 </tr>
             </table>
